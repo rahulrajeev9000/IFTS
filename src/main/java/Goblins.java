@@ -1,9 +1,0 @@
-public class Goblins extends Danger {
-    public Goblins(int x, int y, int damage){
-        super(x,y,damage);
-    }
-    public void inflict(){
-        System.out.println("Goblin has stabbed you");
-        System.out.println();
-    }
-}

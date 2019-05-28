@@ -10,12 +10,10 @@ public class Main {
         while (stt != " "){
         if (stt.equals(" ")) {
             game.game();
+        }else{
+            game.game();
         }
         }
-
-
-
-
 
     }
 

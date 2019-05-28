@@ -3,7 +3,8 @@ public class Leeches extends Danger{
         super(x,y,damage);
     }
     public void inflict(){
-        System.out.println("You have been bitten by leaches");
+        System.out.println();
+        System.out.println("You have been bitten by leeches");
         System.out.println();
     }
 }
