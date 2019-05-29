@@ -1,4 +1,5 @@
 import java.sql.SQLOutput;
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Game {
@@ -15,12 +16,12 @@ public class Game {
 
 
         while (level) {
-        Player p1 = new Player(0,0, 15);
+        Player p1 = new Player(0,0, 25);
             int tx = -10 + (int) (Math.random() * 20 + 1);
             int ty = -10 + (int) (Math.random() * 20 + 1);
 
             Treasure treasure = new Treasure(tx, ty);
-            Shrek shrek = new Shrek(1,1,15);
+            Shrek shrek = new Shrek(-10 + (int)(Math.random() * 20 + 1), -10 + (int) (Math.random() * 20 + 1), 25);
 
 
             Ogre[]ogre= new Ogre[60];
@@ -36,8 +37,9 @@ public class Game {
             while (playing) {
 
                 Compass compass = new Compass(p1.getX(), p1.getY(), treasure.getX(), treasure.getY());
+                DecimalFormat df = new DecimalFormat("#,###.##");
                 compass.getDistance();
-                System.out.println("You are " + compass.distance + "m away from the treasure");
+                System.out.println("You are " +df.format(compass.distance) + "m away from the treasure");
                 System.out.println("You have " + p1.getHealth() + " Health");
                 System.out.println("You have " + points + " points");
 
